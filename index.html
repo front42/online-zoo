@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Online zoo</title>
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="./index.html"><img src="./assets/logo.svg" alt="Online zoo logo"></a>
+          <h1>Online zoo</h1>
+        </div>
+        <nav class="nav">
+          <a class="nav__link active" href="#">About</a>
+          <a class="nav__link" href="./pages/map.html">Map</a>
+          <a class="nav__link" href="./pages/panda.html">Zoos</a>
+          <a class="nav__link" href="./pages/404.html">Contact us</a>
+          <a class="nav__link" href="https://www.figma.com/file/aBvQMVmI665DtzprpiniuH/online-zoo" target="_blank">Design</a>
+        </nav>
+        <button class="burger"><img src="./assets/burger.svg" alt="burger"></button>
+      </div>
+    </div>
+  </header>
+  <div class="intro">
+    <div class="container">
+      <p class="intro__slogan">Watch your favorite animal ONLINE</p>
+      <a href="./pages/panda.html">
+        <button class="btn intro__btn"><img class="play-sign" src="./assets/play-sign.svg" alt="PLay">Play</button>
+      </a>
+    </div>
+  </div>
+  <section class="section">
+    <div class="section__container">
+      <div class="about">
+        <h2>How it works</h2>
+        <div class="gallery-container">
+          <ul class="gallery">
+            <li><img class="eagle" src="./assets/gallery-eagle.jpg" alt="Eagle"></li>
+            <li class="tiger-mobile"><img class="tiger" src="./assets/gallery-tiger.jpg" alt="Tiger"></li>
+            <li><img class="panda" src="./assets/gallery-panda.jpg" alt="Panda"></li>
+            <li><img class="gorilla" src="./assets/gallery-gorilla.jpg" alt="Gorilla"></li>
+            <li><img class="elephant" src="./assets/gallery-elephant.jpg" alt="Elephant"></li>
+          </ul>
+        </div>
+        <div class="about__text">
+          <span>The application Оnline zoo will allow you to watch zoos' and nature reserves' inhabitants in live. Currently, under video-surveillance are pandas in China, eagles on Catalina Island (USA), alligators in Florida and gorillas in the Congo. We are expanding our capabilities and soon online you will meet Arctic snowy owl in Alaska, Penguin in California, Elephant from South Africa and Polar bear from Canada. You will see unique video-shots at any time of the day. If you liked a pet you watch and you want to please it with a delicious treat, you can pay a donation and the animal will receive a surprise from you during feeding hours.</span>
+          <p>We want to thank you for helping the animals and give you <a href="https://en.wikipedia.org/wiki/Coupon" target="_blank">discount coupons</a> from our partners.</p>
+          <span class="about__text-mobile">We want to thank you for helping the animals and give you <a href="https://en.wikipedia.org/wiki/Coupon" target="_blank">discount coupons</a> from our partners.</span>
+        </div>
+      </div>
+    </div>
+    <div class="zoo">
+      <div class="container">
+        <h2>Pets in zoo</h2>
+        <div class="zoo__slider">
+          <button class="slider-btn"><img src="./assets/arrow-left.svg" alt="arrow"></button>
+          <div class="pets">
+            <div class="pet__link">
+              <a href="./pages/panda.html">
+                <span>Panda, China</span>
+                <img class="pets__img" src="./assets/pets-panda-china.jpg" alt="Panda">
+              </a>
+            </div>
+            <div class="pet__link">
+              <a href="#">
+                <span>Polar bear, Canada</span>
+                <img class="pets__img" src="./assets/pets-polar-bear-canada.jpg" alt="Polar bear">
+              </a>
+            </div>
+          </div>
+          <div class="pets">
+            <div class="pet__link">
+              <a href="./pages/alligator.html">
+                <span>Alligator, USA</span>
+                <img class="pets__img" src="./assets/pets-alligator-usa.jpg" alt="Alligator">
+              </a>
+            </div>
+            <div class="pet__link">
+              <a href="./pages/eagle.html">
+                <span>Bald eagle, USA</span>
+                <img class="pets__img" src="./assets/pets-bald-eagle-usa.jpg" alt="Bald eagle">
+              </a>
+            </div>
+          </div>
+          <div class="pets mobile-cut">
+            <div class="pet__link">
+              <a href="./pages/gorilla.html">
+                <span>Gorilla, Eastern DRC</span>
+                <img class="pets__img" src="./assets/pets-gorilla-eastern-drc.jpg" alt="Gorilla">
+              </a>
+            </div>
+            <div class="pet__link">
+              <a href="#">
+                <span>Arctic snowy owl, Alaska</span>
+                <img class="pets__img" src="./assets/pets-arctic-snowy-owl-alaska.jpg" alt="Snowy owl">
+              </a>
+            </div>
+          </div>
+          <div class="pets tablet-cut">
+            <div class="pet__link">
+              <a href="#">
+                <span>Elephant, South Africa</span>
+                <img class="pets__img" src="./assets/pets-elephant-south-africa.jpg" alt="Elephant">
+              </a>
+            </div>
+            <div class="pet__link">
+              <a href="#">
+                <span>Penguin, USA</span>
+                <img class="pets__img" src="./assets/pets-penguin-usa.jpg" alt="Penguin">
+              </a>
+            </div>
+          </div>
+          <button class="slider-btn"><img src="./assets/arrow-right.svg" alt="arrow"></button>
+        </div>
+        <div class="slider__btn-mobile">
+          <button class="arrow-mobile"><img src="./assets/arrow-left.svg" alt="arrow"></button>
+          <button class="arrow-mobile"><img src="./assets/arrow-right.svg" alt="arrow"></button>
+        </div>
+        <a class="btn zoo__link" href="./pages/map.html">Choose your favorite</a>
+      </div>
+    </div>
+    <div class="pay">
+      <div class="container">
+        <h2 id="feed">Pay and feed</h2>
+        <div class="instruction">
+          <img class="pay-arrows" src="./assets/pay-arrows.svg" alt="Arrow">
+          <img class="pay-arrows-640" src="./assets/pay-arrows-640.svg" alt="Arrow">
+          <div class="pay-step">
+            <img src="./assets/pay-1.svg" alt="Pay step">
+            <p>You can pay for a donation to any animal using your Credit/Debit card</p>
+            <img class="pay-arrows-320" src="./assets/pay-arrows-320.svg" alt="Arrow">
+          </div>
+          <div class="pay-step">
+            <img src="./assets/pay-2.svg" alt="Pay step">
+            <p>Donations will go to the account of the zoo or nature reserve</p>
+            <img class="pay-arrows-320" src="./assets/pay-arrows-320.svg" alt="Arrow">
+          </div>
+          <div class="pay-step">
+            <img src="./assets/pay-3.svg" alt="Pay step">
+            <p>The animal will receive a delicious treat during feeding hours</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials">
+      <div class="container">
+        <h2 id="testimonials">Testimonials</h2>
+        <div class="testimonials__slider">
+          <button class="slider-btn"><img src="./assets/arrow-left.svg" alt="arrow"></button>
+          <div class="feedback">
+            <img class="feedback__photo" src="./assets/testimonials-karen.png" alt="Karen">
+            <div class="author">
+              <p>Karen Maitland</p>
+              <img class="author__coin" src="./assets/testimonials-money.svg" alt="Coin">
+              <span>+$10</span>
+            </div>
+            <p class="feedback__text">"Thank you so much for these wonderful live webcams of the eagles on Catalina Island. Being able to watch them in their natural habitat as opposed to zoos is so wonderful. I cannot see myself ever being able to come up there to see them in person, so this is a great substitute. Thank you again."</p>
+          </div>
+          <div class="feedback feedback-sara">
+            <img class="feedback__photo" src="./assets/testimonials-sara.png" alt="Sara">
+            <div class="author">
+              <p>Sara Jones</p>
+              <img class="author__coin" src="./assets/testimonials-money.svg" alt="Coin">
+              <span>+$13</span>
+            </div>
+            <p class="feedback__text">"A disability prevents me from enjoying the outdoors and travel like I used to do. I really enjoy all the live cams and can spend HOURS watching real-time entertainment. Wild life style!"</p>
+          </div>
+          <div class="feedback mobile-cut">
+            <img class="feedback__photo" src="./assets/testimonials-alex.png" alt="Alex">
+            <div class="author">
+              <p>Alex Barden</p>
+              <img class="author__coin" src="./assets/testimonials-money.svg" alt="Coin">
+              <span>+$7</span>
+            </div>
+            <p class="feedback__text">"Here's a huge "thank-you" from New Hampshire - you allow me to travel the world without ever leaving the comfort of my office chair. Jammies on and coffee cup in hand, I am Phineas Fogg!!"</p>
+          </div>
+          <div class="feedback tablet-cut">
+            <img class="feedback__photo" src="./assets/testimonials-alene.png" alt="Alene">
+            <div class="author">
+              <p>Alene Ray</p>
+              <img class="author__coin" src="./assets/testimonials-money.svg" alt="Coin">
+              <span>+$18</span>
+            </div>
+            <p class="feedback__text">"Thank you for all the knowledge, education, pleasure and happiness you have add to all our lives at no expense on our part. My humble thanks and gratitude are being wished for all of you. I want to thank you and feed the animals a small reward"</p>
+          </div>
+          <button class="slider-btn"><img src="./assets/arrow-right.svg" alt="arrow"></button>
+        </div>
+      </div>
+      <div class="slider__btn-mobile">
+        <button class="arrow-mobile"><img src="./assets/arrow-left.svg" alt="arrow"></button>
+        <button class="arrow-mobile"><img src="./assets/arrow-right.svg" alt="arrow"></button>
+      </div>
+      <button class="btn feedback__btn">Leave feedback</button>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a class="footer__logo" href="./index.html"><img src="./assets/footer-logo-zoo.svg" alt="Online zoo footer logo"></a>
+        <button class="btn donate__btn">Donate for volunteers</button>
+        <div class="footer__nav">
+          <a class="footer__link" href="./index.html">About</a>
+          <a class="footer__link" href="./pages/map.html">Map</a>
+        </div>
+        <div class="footer__nav">
+          <a class="footer__link" href="./pages/404.html">Contact us</a>
+          <a class="footer__link" href="#testimonials">Feedback</a>
+        </div>
+        <div class="social">
+          <a href="https://www.instagram.com/" target="_blank"><img src="./assets/footer-icon-instagram.svg" alt="Insagram"></a>
+          <a href="https://www.facebook.com/" target="_blank"><img src="./assets/footer-icon-facebook.svg" alt="Facebook"></a>
+          <a href="https://twitter.com/" target="_blank"><img src="./assets/footer-icon-twitter.svg" alt="Twitter"></a>
+          <a href="https://www.youtube.com/" target="_blank"><img src="./assets/footer-icon-youtube.svg" alt="Youtube"></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="rs-logo tooltip">
+          <img src="./assets/footer-logo-rs.svg" alt="RSSchool logo">
+          <span class="tooltiptext">RSSchool</span>
+        </div>
+        <div class="yem-logo tooltip">
+          <img src="./assets/footer-logo-yem.svg" alt="Yem Digital logo">
+          <span class="tooltiptext">Yem Digital</span>
+        </div>
+        <button class="btn donate__btn-mobile">Donate for volunteers</button>
+        <div class="copyright">
+          <span>Copyright &copy;RSSchool <span class="copy__and">and </span>&copy;Yem Digital 2020 - 2021</span>
+          <span>Grigoreva Margarita</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
