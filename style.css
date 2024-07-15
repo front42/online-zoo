@@ -50,8 +50,8 @@ h1 {
 }
 
 .nav {
-  margin-left: 59px;
   display: flex;
+  margin-left: 59px;
   font-size: 18px;
   font-weight: 700;
 }
@@ -68,15 +68,12 @@ h1 {
   margin-right: 0;
 }
 
-.active {
-  pointer-events: none;
-}
-
-.nav__link:first-child {
+.active-link {
   text-shadow: 1px 0 1px #70CB0E,
   0 1px 1px #70CB0E,
   -1px 0 1px #70CB0E,
   0 -1px 1px #70CB0E;
+  pointer-events: none;
 }
 
 .nav__link:hover {
@@ -86,7 +83,7 @@ h1 {
   0 -1px 1px #70CB0E;
 }
 
-.burger {
+/* .burger {
   display: none;
   vertical-align: top;
   margin-left: auto;
@@ -94,7 +91,7 @@ h1 {
   border: none;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-}
+} */
 
 .intro {
   padding-top: 80px;
@@ -290,6 +287,10 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.pet__link:first-child {
+  margin-bottom: 30px;
 }
 
 .pet__link {
@@ -548,9 +549,9 @@ h2 {
 }
 
 @media screen and (max-width: 1400px) {
-  .intro {
+  /* .intro {
     background-position-x: 48%;
-  }
+  } */
 
   .section__container {
     max-width: 1200px;
@@ -902,12 +903,83 @@ h2 {
 
 @media screen and (max-width: 575px) {
   .nav {
-    display: none;
+    margin: 0;
+    position: absolute;
+    top: 71px;
+    left: 33px;
+    display: inline-block;
+    width: 120px;
+    opacity: 0;
+    pointer-events: none;
+    transition: none;
+  }
+
+  .nav.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 1.5s;
+  }
+
+  .nav__link {
+    display: inline-block;
+    margin: 17px 22px 0 0;
+  }
+
+  .header__inner {
+    justify-content: space-between;
   }
 
   .burger {
-    display: inline-block;
-    margin-top: -5px;
+    position: relative;
+    top: -4px;
+    width: 36px;
+    height: 37px;
+  }
+
+  .burger span {
+    position: absolute;
+    top: 16.5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000;
+    transition: .3s;
+  }
+
+  .burger::before,
+  .burger::after {
+    content: '';
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    transition: .3s;
+  }
+
+  .burger::before {
+    top: 6px;
+  }
+
+  .burger::after {
+    bottom: 8px;
+  }
+
+  .burger.active span {
+    transform: rotate(45deg);
+    top: 18px;
+  }
+
+  .burger.active::before {
+    transform: rotate(45deg);
+    top: 18px;
+  }
+
+  .burger.active::after {
+    transform: rotate(135deg);
+    bottom: 17px;
   }
 
   .intro {
@@ -916,6 +988,12 @@ h2 {
 
   .intro__slogan {
     width: 290px;
+    transition: 1.5s;
+  }
+
+  .intro__slogan.invisible {
+    opacity: 0;
+    transition: none;
   }
 
   .intro__btn {
