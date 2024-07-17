@@ -1,4 +1,4 @@
-*,
+/* *,
 *::before,
 *::after {
   margin: 0;
@@ -32,7 +32,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .header__inner {
@@ -60,15 +60,12 @@ h1 {
   margin-right: 0;
 }
 
-.active {
-  pointer-events: none;
-}
-
-.nav__link:nth-child(3) {
+.active-link {
   text-shadow: 1px 0 1px #70CB0E,
   0 1px 1px #70CB0E,
   -1px 0 1px #70CB0E,
   0 -1px 1px #70CB0E;
+  pointer-events: none;
 }
 
 .nav__link:hover {
@@ -76,16 +73,20 @@ h1 {
   0 1px 1px #70CB0E,
   -1px 0 1px #70CB0E,
   0 -1px 1px #70CB0E;
-}
+} */
 
-.burger {
+.aside__btn {
+  position: fixed;
+  top: 287px;
+  left: 20px;
+  width: 50px;
   display: none;
   vertical-align: top;
-  margin-left: auto;
-  background: none;
   border: none;
+  background: none;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  z-index: 1;
+  transition: .7s;
 }
 
 .aside {
@@ -100,7 +101,8 @@ h1 {
   justify-content: space-evenly;
   align-items: center;
   background: url(./assets/aside-bg.svg) no-repeat center top / auto;
-  z-index: 1000;
+  z-index: 20;
+  transition: .5s;
 }
 
 .aside__tooltip {
@@ -170,23 +172,6 @@ h2 {
 .animal {
   margin-top: 80px;
   text-align: center;
-}
-
-.aside__btn {
-  position: fixed;
-  top: 287px;
-  left: 20px;
-  display: inline-block;
-  vertical-align: top;
-  border: none;
-  background: none;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.menu {
-  display: none;
-  width: 50px;
 }
 
 .preview {
@@ -443,11 +428,15 @@ iframe {
 
 @media screen and (max-width: 1324px) {
   .aside {
-    display: none;
+    left: -210px;
   }
 
-  .menu {
-    display: block;
+  .aside-visible {
+    left: 0;
+  }
+
+  .aside__btn {
+    display: inline-block;
   }
 }
 
@@ -627,12 +616,83 @@ iframe {
 
 @media screen and (max-width: 575px) {
   .nav {
-    display: none;
+    margin: 0;
+    position: absolute;
+    top: 72px;
+    left: 40px;
+    display: inline-block;
+    width: 120px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .6s;
+  }
+
+  .nav.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: .6s ease-in;
+  }
+
+  .nav__link {
+    display: inline-block;
+    margin: 17px 22px 0 0;
+  }
+
+  .header__inner {
+    justify-content: space-between;
   }
 
   .burger {
-    display: inline-block;
-    margin-top: -5px;
+    position: relative;
+    top: -4px;
+    width: 36px;
+    height: 37px;
+  }
+
+  .burger span {
+    position: absolute;
+    top: 16.5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000;
+    transition: .3s;
+  }
+
+  .burger::before,
+  .burger::after {
+    content: '';
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    transition: .3s;
+  }
+
+  .burger::before {
+    top: 6px;
+  }
+
+  .burger::after {
+    bottom: 8px;
+  }
+
+  .burger.active span {
+    transform: rotate(45deg);
+    top: 18px;
+  }
+
+  .burger.active::before {
+    transform: rotate(45deg);
+    top: 18px;
+  }
+
+  .burger.active::after {
+    transform: rotate(135deg);
+    bottom: 17px;
   }
 
   .footer {
@@ -681,5 +741,24 @@ iframe {
 
   .copy__and {
     display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .nav {
+    left: 33px;
+  }
+
+  .aside__btn {
+    left: 9px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .aside {
+    top: 73px;
+  }
+  .aside-visible {
+    left: -13px;
   }
 }
