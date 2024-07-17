@@ -79,7 +79,7 @@ h1 {
   position: fixed;
   top: 287px;
   left: 20px;
-  width: 50px;
+  /* width: 50px; */
   display: none;
   vertical-align: top;
   border: none;
@@ -427,6 +427,10 @@ iframe {
 }
 
 @media screen and (max-width: 1324px) {
+  .aside__btn-img {
+    width: 50px;
+  }
+
   .aside {
     left: -210px;
   }
@@ -744,7 +748,7 @@ iframe {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 435px) {
   .nav {
     left: 33px;
   }
@@ -752,12 +756,17 @@ iframe {
   .aside__btn {
     left: 9px;
   }
+
+  .aside {
+    top: 130px;
+  }
 }
 
 @media screen and (max-width: 325px) {
   .aside {
-    top: 73px;
+    top: 68px;
   }
+
   .aside-visible {
     left: -13px;
   }
