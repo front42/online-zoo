@@ -79,7 +79,6 @@ h1 {
   position: fixed;
   top: 287px;
   left: 20px;
-  /* width: 50px; */
   display: none;
   vertical-align: top;
   border: none;
@@ -427,6 +426,10 @@ iframe {
 }
 
 @media screen and (max-width: 1324px) {
+  .aside__btn {
+    display: inline-block;
+  }
+
   .aside__btn-img {
     width: 50px;
   }
@@ -437,10 +440,6 @@ iframe {
 
   .aside-visible {
     left: 0;
-  }
-
-  .aside__btn {
-    display: inline-block;
   }
 }
 
